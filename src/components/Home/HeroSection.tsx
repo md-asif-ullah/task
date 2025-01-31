@@ -10,12 +10,12 @@ const HeroSection = () => {
       </div>
 
       <div className="hidden lg:block">
-        <Image
+        {/* <Image
           src="/backgrounds/WaveLinesMobile1.svg"
           alt="Hero Image"
           fill
           className="w-full h-full absolute top-0 left-0 bottom-0 z-10"
-        />
+        /> */}
         <Image
           src="/images/homeImage.jpg"
           alt="Hero Image"

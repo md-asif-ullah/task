@@ -27,7 +27,7 @@ const FeatureComponentImageSection = () => {
         width={100}
         height={100}
         alt="feature icon"
-        className="absolute top-1/4 -right-2 z-30 h-1/5 w-1/5"
+        className="absolute top-1/4 -right-2 z-30 h-1/5 w-1/5 md:w-auto md:h-auto"
       />
       <Image
         src="/icons/feature/icon-2.svg"
