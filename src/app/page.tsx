@@ -1,3 +1,4 @@
+import Footer from "@/components/Home/Footer";
 import FeatureSction from "@/components/Home/FutureSction";
 import { FutureTechnology } from "@/components/Home/FutureTechnology";
 import HeroSection from "@/components/Home/HeroSection";
@@ -13,7 +14,7 @@ const Home = () => {
       <PhilocofhySection />
       <FutureTechnology />
       <TrustedSection />
-      <div className="bg-black h-screen"></div>
+      <Footer />
     </div>
   );
 };
