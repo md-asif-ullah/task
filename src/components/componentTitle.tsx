@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 
 interface Props {
   title: string;
-  subTitle: string;
+  subTitle?: string;
   titleStyle?: string;
   subTitleStyle?: string;
   containerStyle?: string;
@@ -25,14 +25,16 @@ const ComponentTitle = ({
       >
         {title}
       </h4>
-      <h2
-        className={cn(
-          "text-[#0b305b] text-3xl font-semibold md:text-3xl lg:text-6xl lg:font-semibold xl:text-6xl",
-          subTitleStyle
-        )}
-      >
-        {subTitle}
-      </h2>
+      {subTitle && (
+        <h2
+          className={cn(
+            "text-[#0b305b] text-3xl font-semibold md:text-3xl lg:text-6xl lg:font-semibold xl:text-6xl",
+            subTitleStyle
+          )}
+        >
+          {subTitle}
+        </h2>
+      )}
     </section>
   );
 };

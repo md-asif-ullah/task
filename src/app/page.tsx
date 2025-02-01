@@ -1,3 +1,4 @@
+import AnimatedNumberCounter from "@/components/Home/animatedNumberCounte";
 import FeatureSction from "@/components/Home/FutureSction";
 import { FutureTechnology } from "@/components/Home/FutureTechnology";
 import HeroSection from "@/components/Home/HeroSection";
@@ -11,6 +12,7 @@ const Home = () => {
       <FeatureSction />
       <PhilocofhySection />
       <FutureTechnology />
+      <AnimatedNumberCounter />
       <div className="bg-black h-screen"></div>
     </div>
   );
