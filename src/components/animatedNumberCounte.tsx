@@ -3,6 +3,10 @@
 import Image from "next/image";
 import React from "react";
 import CountUp from "react-countup";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const AnimatedNumberCounter = () => {
   return (

@@ -1,5 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import ComponentTitle from "../componentTitle";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 interface Features {
   icon: string;
@@ -33,6 +37,40 @@ const features: Features[] = [
 ];
 
 const PhilocofhySection = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            gsap.from(".feature-item", {
+              opacity: 0,
+              y: 50,
+              stagger: 0.2,
+              duration: 1,
+              ease: "power3.out",
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    const currentSection = sectionRef.current;
+    if (currentSection) {
+      observer.observe(currentSection);
+    }
+
+    return () => {
+      if (currentSection) {
+        observer.unobserve(currentSection);
+      }
+    };
+  }, []);
   return (
     <div className="min-h-screen h-full bg-white pt-36 pb-20 px-5 lg:px-10 xl:px-48">
       <div>
@@ -63,10 +101,16 @@ const PhilocofhySection = () => {
         />
       </div>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-16 xl:gap-24 mt-10 mx-7">
+      <section
+        ref={sectionRef}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-16 xl:gap-24 mt-10 mx-7"
+      >
         {features.map((feature, index) => (
-          <div key={index} className="flex flex-col items-start space-y-7">
-            <div className="">
+          <div
+            key={index}
+            className="feature-item flex flex-col items-start space-y-7"
+          >
+            <div>
               <Image
                 src={feature.icon}
                 alt={feature.alt}
