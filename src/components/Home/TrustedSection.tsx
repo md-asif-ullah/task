@@ -5,13 +5,15 @@ import IndustryIocns from "../industryIocns";
 
 const TrustedSection = () => {
   return (
-    <div className="w-full h-full py-28 bg-white">
-      <ComponentTitle title="TRUSTED BY THE BEST" />
-      <AnimatedNumberCounter />
-      <div className="mt-10">
-        <IndustryIocns />
+    <>
+      <div className="w-full h-full py-28 bg-white">
+        <ComponentTitle title="TRUSTED BY THE BEST" />
+        <AnimatedNumberCounter />
+        <div className="mt-10">
+          <IndustryIocns />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import LargeDeviceHeader from "@/components/LargeDeviceHeader";
 import Button from "../Button";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 type ImageDataType = {
   src: string;
@@ -47,7 +51,8 @@ const largeScreenImages: ImageDataType[] = [
     alt: "Hero Image",
     height: 500,
     width: 500,
-    className: "w-2/3 h-full absolute top-0 hidden xl:block right-0 bottom-0",
+    className:
+      "w-2/3 h-full absolute top-0 hidden xl:block right-0 bottom-0 img",
   },
   {
     src: "/images/homeImage2.jpg",
@@ -91,6 +96,14 @@ const smallScreenImages: smallScreenImagesType[] = [
 ];
 
 const HeroSection = () => {
+  useGSAP(() => {
+    gsap.from(".img", {
+      x: 100,
+      duration: 1,
+      delay: 0.5,
+    });
+  });
+
   return (
     <div className="xl:h-[85vh] lg:min-h-screen lg:h-[600px] h-full bg-gradient-to-r from-[#1a7ae9] via-[#1373e0] to-[#005ec8] lg:bg-none relative">
       <div className="hidden lg:block absolute top-0 left-0 right-0 px-8 xl:px-48 lg:px-12 z-50">
