@@ -105,7 +105,7 @@ const HeroSection = () => {
   });
 
   return (
-    <div className="xl:h-[85vh] lg:min-h-screen lg:h-[600px] h-full bg-gradient-to-r from-[#1a7ae9] via-[#1373e0] to-[#005ec8] lg:bg-none relative">
+    <div className="xl:h-[85vh] lg:h-[600px] h-full bg-gradient-to-r from-[#1a7ae9] via-[#1373e0] to-[#005ec8] lg:bg-none relative">
       <div className="hidden lg:block absolute top-0 left-0 right-0 px-8 xl:px-48 lg:px-12 z-50">
         <LargeDeviceHeader />
       </div>
