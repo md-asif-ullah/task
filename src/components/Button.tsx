@@ -12,7 +12,7 @@ const Button = ({ text, className }: Props) => {
   return (
     <button
       className={cn(
-        "flex justify-center items-center border px-4 py-2 text-lg rounded-md border-white bg-transparent text-white hover:bg-white hover:text-[#1b76e9] transition",
+        "flex justify-center items-center border px-4 py-2 text-lg rounded-md border-white bg-transparent text-white hover:bg-white hover:text-[#1b76e9] transition cursor-pointer",
         className
       )}
     >

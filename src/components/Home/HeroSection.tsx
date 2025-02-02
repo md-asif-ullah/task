@@ -4,24 +4,60 @@ import Button from "../Button";
 
 const HeroSection = () => {
   return (
-    <div className="lg:h-[95vh] h-full bg-gradient-to-r from-[#1a7ae9] via-[#1373e0] to-[#005ec8] lg:bg-none relative">
-      <div className="hidden lg:block px-8 xl:px-48 lg:px-12 z-50">
+    <div className="xl:h-[85vh] lg:min-h-screen lg:h-[600px] h-full bg-gradient-to-r from-[#1a7ae9] via-[#1373e0] to-[#005ec8] lg:bg-none relative">
+      <div className="hidden lg:block absolute top-0 left-0 right-0 px-8 xl:px-48 lg:px-12 z-50">
         <LargeDeviceHeader />
       </div>
 
-      <div className="hidden lg:block">
-        {/* <Image
-          src="/backgrounds/WaveLinesMobile1.svg"
+      <div className="hidden lg:block xl:px-48 lg:px-12">
+        <div className="text-start   absolute z-50 xl:top-40 top-28">
+          <h2 className="headtext font-semibold text-white xl:w-[750px] lg:w-[500px]">
+            Embrace the future of finance
+          </h2>
+          <p className="font-semibold text-white w-[500px] mt-8">
+            Reimagine financial services with AnyTech’s open platform,
+            distributed banking solution that powers transformation
+          </p>
+
+          <Button
+            text="Reach Out to Us"
+            className="bg-[#fe8b53] border-[#fe8b53] hover:bg-[#fe8b53] hover:text-white mt-7"
+          />
+        </div>
+        <Image
+          src="/images/hero-sectionGradient-image.png"
           alt="Hero Image"
-          fill
-          className="w-full h-full absolute top-0 left-0 bottom-0 z-10"
-        /> */}
+          height={500}
+          width={700}
+          className="xl:w-[85%] h-full hidden xl:block absolute top-0 left-0 right-0 bottom-0 z-10"
+        />
+        <Image
+          src="/images/hero-sectionGradient-image2.png"
+          alt="Hero Image"
+          height={500}
+          width={1000}
+          className="w-[80%] h-full hidden lg:block xl:hidden absolute top-0 left-0 right-0 bottom-0 z-10"
+        />
+        <Image
+          src="/images/heroCornarImage.png"
+          alt="Hero Image"
+          height={50}
+          width={50}
+          className="w-auto h-auto xl:w-48 xl:h-48 absolute bottom-4 right-0 z-10"
+        />
         <Image
           src="/images/homeImage.jpg"
           alt="Hero Image"
           height={500}
           width={500}
-          className="w-2/3 h-full absolute top-0 right-0 bottom-0"
+          className="w-2/3 h-full absolute top-0 hidden xl:block right-0 bottom-0"
+        />
+        <Image
+          src="/images/homeImage2.jpg"
+          alt="Hero Image"
+          height={500}
+          width={500}
+          className="w-2/3 h-full absolute top-0 hidden lg:block xl:hidden right-0 bottom-0"
         />
         <Image
           src="/images/heroBottom.png"
